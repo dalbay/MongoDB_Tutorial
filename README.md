@@ -37,7 +37,7 @@ switched to db natours-test
 }
 >
 ```
-- to check if the data is inserted - (notice the auto created objectId; and return is a JSON object)
+- to check if the data is inserted - **```db.tours.find()```**(notice the auto created objectId; and return is a JSON object)
 ```
 > db.tours.find()
 { "_id" : ObjectId("5db5c1031d3e30f64d200487"), "name" : "The Forest Hiker", "price" : 297, "rating" : 4.7 }
@@ -58,7 +58,31 @@ natours-test  0.000GB
 tours
 >
 ```  
+- to exit mongoDB - **```quit()```**
 <br/>
 
 ## CRUD: Creating Documents
+```JavaScript
+> db.tours.insertMany( [{ name: "The Sea Explorer", price: 497, rating: 4.8 } , { name: "The Snow Adventure", price: 997, rating: 4.9, difficulty: "easy" }] )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5db5c49f5210ece73831c26e"),
+                ObjectId("5db5c49f5210ece73831c26f")
+        ]
+}
+>
+```  
+<br/>
 
+##CRUD: Querying (Reading) Documents
+- get all - **```> db.tours.find()```**
+- get one - **```> db.tours.find( { name: "The Forest Hiker" } )```**
+- use different query operators - **```> db.tours.find( { price: {$lte: 500} })```**
+- use two search criterias at the same time - **```> db.tours.find( { price: {$lt: 500}, rating: {$gte: 4.8} })   ```**
+- use or query - **```> db.tours.find({ $or: [ {price: {$lt: 500}}, {rating: {$gte: 4.8}} ] } )```**
+- besides the filter object, we can also pass in an object for **projection**(selecting some of he fields in the output.) - **```> db.tours.find({ $or: [ {price: {$gt: 500}}, {rating: {$gte: 4.8}} ] }, {name: 1} )```**  
+```JSON
+{ "_id" : ObjectId("5db5c49f5210ece73831c26e"), "name" : "The Sea Explorer" }
+{ "_id" : ObjectId("5db5c49f5210ece73831c26f"), "name" : "The Snow Adventure" }
+```
