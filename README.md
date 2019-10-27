@@ -100,6 +100,9 @@ tours
 ## CRUD: Deleting Documents
 - **```> db.tours.deleteMany( { rating: {$lt: 4.8} })```**  
 - to delete all documents - **```> db.tours.deleteMany( {} )```**  
+<br/>  
 
-
-
+## Using Compass App for CRUD Operations
+- Instead of using the terminal we can also use an Compass - download **MongoDB Compass** - mongodb.com -> Tools -> Compass
+- Connet to Host
+![mongoDB compass db](images/mongoDB4.png)
