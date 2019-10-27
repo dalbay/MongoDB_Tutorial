@@ -106,3 +106,5 @@ tours
 - Instead of using the terminal we can also use an Compass - download **MongoDB Compass** - mongodb.com -> Tools -> Compass
 - Connet to Host
 ![mongoDB compass db](images/mongoDB4.png)
+- here you can Insert, Update, and Delete Documents; and filter documents; use Aggregations, Indexes
+![mongoDB compass db](images/mongoDB5.png)
