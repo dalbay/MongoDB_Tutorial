@@ -13,8 +13,9 @@
 test
 >
 ```   
-- close the cmd prompt (server and mongo shell with Ctrl+c)
-- to run the mongo server on a different directory = (the mongod.exe file comes from the bin directory); we need to tell to look for this file in the bin directory by using system variables.  
+- close both cmd prompts - server and mongo shell with Ctrl+c
+- ***to run the mongo server on a different directory***:  
+  (the mongod.exe file comes from the bin directory); we need to look for this file in the bin directory by using **System variables**.  
   Go to Windows Setting -> in the search bar type in env and click on Edit system Environmental Variables -> **Environmental Variables** -> System variables - Path -> Edit -> Add mongoDB here; copy the bin directory for mongoDB; New -> past path here. -> OK  
   Now you can run mongo in any directory.  
 
