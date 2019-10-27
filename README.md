@@ -20,4 +20,21 @@ test
   Now you can run mongo in any directory.  
 
 ## Creating a Local Database
-
+- run server and mongo Shell (cls to clean the terminal)
+- **use**command - will create or use the db
+```
+> use natours-test
+switched to db natours-test
+```
+- create document inside a collection - **```> db.tours.insertMany()```**
+- **insertMany()**method to create multiple documents; **insertOne()**method to insert one document
+- insert a JavaScript object; this will be converted into JSON and later on to BSON.
+```
+> db.tours.insertOne({ name: "The Forest Hiker", price: 297, rating: 4.7 })
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("5db5c1031d3e30f64d200487")
+}
+>
+```
+- to check if the data is inserted: 
