@@ -94,5 +94,12 @@ tours
 ```JSON
 { "_id" : ObjectId("5db5c49f5210ece73831c26f"), "name" : "The Snow Adventure", "price" : 597, "rating" : 4.9, "difficulty" : "easy", "premium" : true }
 ```  
-- to replace documents, pass in the search query and then the new data - **```> db.tours.replaceOne()```** / **```> db.tours.replaceMany()```**
+- to replace documents, pass in the search query and then the new data - **```> db.tours.replaceOne()```** / **```> db.tours.replaceMany()```**  
+<br/>  
+
+## CRUD: Deleting Documents
+- **```> db.tours.deleteMany( { rating: {$lt: 4.8} })```**  
+- to delete all documents - **```> db.tours.deleteMany( {} )```**  
+
+
 
