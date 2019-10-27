@@ -85,4 +85,14 @@ tours
 ```JSON
 { "_id" : ObjectId("5db5c49f5210ece73831c26e"), "name" : "The Sea Explorer" }
 { "_id" : ObjectId("5db5c49f5210ece73831c26f"), "name" : "The Snow Adventure" }
-```
+```  
+<br/>
+
+## CRUD: Updating Documents
+- to update one document - **```> db.tours.updateOne( {name: "The Snow Adventure"}, { $set: {price: 597} })```**
+- create new properties and set these to a new value - **```> db.tours.updateMany({ price: {$gt: 500}, rating: {$gte: 4.8} }, {$set: {premium: true} })```**  
+```JSON
+{ "_id" : ObjectId("5db5c49f5210ece73831c26f"), "name" : "The Snow Adventure", "price" : 597, "rating" : 4.9, "difficulty" : "easy", "premium" : true }
+```  
+- to replace documents, pass in the search query and then the new data - **```> db.tours.replaceOne()```** / **```> db.tours.replaceMany()```**
+
