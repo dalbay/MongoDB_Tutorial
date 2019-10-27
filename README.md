@@ -107,4 +107,14 @@ tours
 - Connet to Host
 ![mongoDB compass db](images/mongoDB4.png)
 - here you can Insert, Update, and Delete Documents; and filter documents; use Aggregations, Indexes
-![mongoDB compass db](images/mongoDB5.png)
+![mongoDB compass db](images/mongoDB5.png)  
+<br/>
+
+## Creating a Hosted Database with Atlas
+- create a remote db hosted on mongoDB atlas.
+- mongodb.com -> Products -> MongoDB Atlas -> Start Free (Create Account) -> Create New Project -> Build A Cluster(instance of our db)
+- Now we have a blank database, ready to connnect to our own development computer.
+![mongoDB atlas db](images/mongoDB6.png)  
+<br/>
+
+## Connecting to Our Hosted Database
