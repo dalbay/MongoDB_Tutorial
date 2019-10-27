@@ -37,4 +37,24 @@ switched to db natours-test
 }
 >
 ```
-- to check if the data is inserted: 
+- to check if the data is inserted - (notice the auto created objectId; and return is a JSON object)
+```
+> db.tours.find()
+{ "_id" : ObjectId("5db5c1031d3e30f64d200487"), "name" : "The Forest Hiker", "price" : 297, "rating" : 4.7 }
+>
+```  
+- display all the databases that we have in mongoDB - **```show dbs```**
+```
+> show dbs
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+natours-test  0.000GB
+>
+```
+- displays the collections in a database - **```show collections```**  
+```
+> show collections
+tours
+>
+```
