@@ -118,3 +118,5 @@ tours
 <br/>
 
 ## Connecting to Our Hosted Database
+- in the Atlas app click on Connect; follow the steps:
+![mongoDB vs relational db](images/mongoDB6.png)
