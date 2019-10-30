@@ -136,3 +136,24 @@ DATABASE_PASSWORD=X31AiFbvjVRYNXXE
 ![display in Compass](images/mongoDB10.png)
 - Next, allow access to this cluster from everywhere. (We listed our IP in order to grant access to this cluster) If we want to work on a different computer - Click on Clusters -> Security -> IP WhiteList -> Add IP Address -> ALLOW ACCESS FROM ANYWHERE
 ![ALLOW access anywhere](images/mongoDB11.png)
+- Connect MongoDB Shell to this cluster. Clusters -> Connect -> Connect With MongoDB Shell (If you already have it installed just copy this connect string) -> open MongoDB Shell (cmd - mongo.exe) -> quit() (if it connected to locally running mongo server.) -> paste the string in the terminal 
+mongo "mongodb+srv://cluster0-hhfve.mongodb.net/test"  --username aygun -> enter password
+- type ```show dbs``` in the terminal and check if you can see the databases
+```
+MongoDB Enterprise Cluster0-shard-0:PRIMARY> show dbs
+admin    0.000GB
+local    3.283GB
+natours  0.000GB
+MongoDB Enterprise Cluster0-shard-0:PRIMARY>
+```
+- This display shows that we are connected
+- next type ```use natours``` in the terminal - this will switch to db natours
+- type ```db.tours.find()``` -  here we see the document that we have just created in Compass.
+```
+MongoDB Enterprise Cluster0-shard-0:PRIMARY> use natours
+switched to db natours
+MongoDB Enterprise Cluster0-shard-0:PRIMARY> db.tours.find()
+{ "_id" : ObjectId("5db9a63954620261740cfe4b"), "name" : "The Forest Hiker", "price" : 297, "rating" : 4.7 }
+MongoDB Enterprise Cluster0-shard-0:PRIMARY>
+```
+---
