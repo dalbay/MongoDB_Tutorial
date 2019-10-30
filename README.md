@@ -120,3 +120,15 @@ tours
 ## Connecting to Our Hosted Database
 - in the Atlas app click on Connect; follow the steps:
 ![mongoDB vs relational db](images/mongoDB6.png)
+- Create a MongoDB user by copying the user name and password and save it in your config file - **config.env**
+```JavaScript
+NODE_ENV=development
+PORT=8000
+DATABASE_PASSWORD=X31AiFbvjVRYNXXE
+```
+- Choose a connection method - Connect with MongoDB Compass
+- Copy the connection string and open up Compass - this will detect the connection string in the clipboard and auto fill the settings for us. Copy your password here and click Connect
+- Here, create a Database - Database Name = natours / Collection Name = tours
+![create a mongoDB database](images/mongoDB8.png)
+- Insert your first document on a remote database
+![insert document to a remote database](images/mongoDB9.png)
