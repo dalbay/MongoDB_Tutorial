@@ -134,4 +134,5 @@ DATABASE_PASSWORD=X31AiFbvjVRYNXXE
 ![insert document to a remote database](images/mongoDB9.png)
 - Open browser and check your cluster - Cluster -> Collections - Here we see the database name(natours), collection name(tours), and the tour that we have just created in Compass.
 ![display in Compass](images/mongoDB10.png)
-- Next, allow access to this cluster from everywhere.
+- Next, allow access to this cluster from everywhere. (We listed our IP in order to grant access to this cluster) If we want to work on a different computer - Click on Clusters -> Security -> IP WhiteList -> Add IP Address -> ALLOW ACCESS FROM ANYWHERE
+![ALLOW access anywhere](images/mongoDB11.png)
