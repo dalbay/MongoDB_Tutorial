@@ -132,3 +132,6 @@ DATABASE_PASSWORD=X31AiFbvjVRYNXXE
 ![create a mongoDB database](images/mongoDB8.png)
 - Insert your first document on a remote database
 ![insert document to a remote database](images/mongoDB9.png)
+- Open browser and check your cluster - Cluster -> Collections - Here we see the database name(natours), collection name(tours), and the tour that we have just created in Compass.
+![display in Compass](images/mongoDB10.png)
+- Next, allow access to this cluster from everywhere.
